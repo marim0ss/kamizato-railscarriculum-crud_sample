@@ -1,7 +1,8 @@
 
-<%= form_for @user, url: "/users", html: { method: :post } do |f| %>
+<!--  form_for @user, url: "/users", html: { method: :post } do |f| -->
 
-<!-- form_for @user do |f| %>と書き換え可能 -->
+<%= form_for @user do |f| %>
+<!-- と短く書き換え可能 -->
 
   <p>投稿する</p>
   <p>お名前：<%= f.text_field :name %></p>

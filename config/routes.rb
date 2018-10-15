@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/users/new', to: 'users#new'
 
-  # createはHTTPpリクエストはpost
+  # createはHTTPリクエストはpost
   post '/users', to: 'users#create'
 
 end
