@@ -1,0 +1,10 @@
+
+<%= form_for @user, url: "/users", html: { method: :post } do |f| %>
+
+<!-- form_for @user do |f| %>と書き換え可能 -->
+
+  <p>投稿する</p>
+  <p>お名前：<%= f.text_field :name %></p>
+  <p>年齢：<%= f.text_field :age %></p>
+  <input type="submit" name="" value="送信">
+<% end %>
