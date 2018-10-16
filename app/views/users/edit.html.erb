@@ -1,0 +1,7 @@
+<!-- 次に処理が流れるpatch=updateのURLと{ method: :patch }を指定 -->
+<%= form_for @user, url: "/users/#{@user.id}", html: { method: :patch } do |f| %>
+<p>ユーザー情報を編集</p>
+<p><%= f.text_field :name %></p>
+<p><%= f.text_field :age %></p>
+<input type="submit" name="" value="更新する">
+<% end %>

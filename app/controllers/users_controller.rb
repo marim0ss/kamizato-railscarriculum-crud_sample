@@ -13,8 +13,17 @@ class UsersController < ApplicationController
     User.create(users_params)
   end
 
+  def edit
+    @user = User.find(params[:id]) # <=削除ボタンのリンクuser.idからidを受け取った！
+  end
 
-  def desrtoy
+  def update
+    user = User.find(params[:id])
+    user.update(users_params)
+  end
+
+
+  def destroy
     user = User.find(params[:id]) # <=削除ボタンのリンクuser.idからidを受け取った！
     user.delete
   end
