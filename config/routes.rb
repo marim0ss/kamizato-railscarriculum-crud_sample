@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   # createはHTTPリクエストはpost
   post '/users', to: 'users#create'
 
+  # desrtoyのHTTPリクエストはdelete
+  delete '/users/:id', to: 'users#destroy'
 end

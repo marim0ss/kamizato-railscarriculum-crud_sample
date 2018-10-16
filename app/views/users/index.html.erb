@@ -5,4 +5,6 @@
     <%= user.name %>
     <%= user.age %>
   </p>
+<%= link_to '削除', "/users/#{user.id}", method: :delete %>
+
 <% end %>

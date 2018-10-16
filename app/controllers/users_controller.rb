@@ -14,6 +14,10 @@ class UsersController < ApplicationController
   end
 
 
+  def desrtoy
+    user = User.find(params[:id]) # <=削除ボタンのリンクuser.idからidを受け取った！
+    user.delete
+  end
 
   private
     def users_params
