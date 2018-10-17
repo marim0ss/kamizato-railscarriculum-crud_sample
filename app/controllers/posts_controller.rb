@@ -12,6 +12,12 @@ class PostsController < ApplicationController
     Post.create(posts_paramas)
   end
 
+  def destroy
+    # 削除内容をビューで表示させるためpost -> @postに変更した
+    @post = Post.find(params[:id])
+    @post.delete
+  end
+
 
   private
     def posts_paramas
