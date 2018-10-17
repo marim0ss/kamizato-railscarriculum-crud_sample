@@ -9,7 +9,16 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(posts_paramas)
+    Post.create(posts_params)
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+     post = Post.find(params[:id])
+     post.update(posts_params)
   end
 
   def destroy
@@ -20,7 +29,7 @@ class PostsController < ApplicationController
 
 
   private
-    def posts_paramas
+    def posts_params
       params.require(:post).permit(:name, :content)
     end
 end
