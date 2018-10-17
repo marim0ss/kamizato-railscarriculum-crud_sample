@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get '/users', to: 'users#index'
 
   get '/users/new', to: 'users#new'
@@ -13,4 +14,9 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update'
   # desrtoyのHTTPリクエストはdelete
   delete '/users/:id', to: 'users#destroy'
+
+  # -------------------------------------------
+  get '/posts', to: 'posts#index'
+  get '/posts/new', to: 'posts#new'
+  post '/posts', to: 'posts#create'
 end

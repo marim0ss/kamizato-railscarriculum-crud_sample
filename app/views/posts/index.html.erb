@@ -1,0 +1,9 @@
+<%= link_to "新規投稿する", "/posts/new" %>
+
+<% @posts.each do |post| %>
+  <p>
+    <%= post.name %>
+    <%= post.content %>
+    <%= post.id %>
+  </p>
+<% end %>

@@ -1,0 +1,6 @@
+<%= form_for @post, url: "/posts", html: {method: :post } do |f| %>
+<p>新しいpostを投稿する</p>
+<p>題名：<%= f.text_field :name %></p>
+<p>コメント：<%= f.text_area :content %></p>
+<input type="submit" name="" value="投稿する">
+<% end %>
